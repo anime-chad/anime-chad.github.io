@@ -55,11 +55,13 @@
         function onFrame(event){
             for(var i = 0; i < adams.length; i++){
                 adams[i].scale(0.95);
-                if(i > 50){
-                    adams.shift();
-                    path = "./boff2.png"
+                if(i > 40){
+                   path = "./boff2.png"
                 } else {
                     path = "./boff.png"
+                }
+                if(i > 50){
+                adams.shift();
                 }
             }
         }
