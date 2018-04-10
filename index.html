@@ -56,13 +56,9 @@
         function onFrame(event){
             for(var i = 0; i < adams.length; i++){
                 adams[i].scale(0.95);
-                if(i > 40){
-                   path = "./boff2.png";
-                } else {
-                    path = "./boff.png";
-                }
-                if(i > 50){
-                adams.shift();
+                adams[i].position += new Point(Math.sin(3 * event.time),Math.cos( 5 * event.time)) ;
+                if(adams[i].bounds.width < 1){
+                    adams[i].remove();
                 }
             }
         }
