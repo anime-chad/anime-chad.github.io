@@ -56,10 +56,8 @@
             for(var i = 0; i < adams.length; i++){
                 adams[i].scale(0.95);
                 if(i > 50){
-                    adams[0].remove();
-                    adams,splice(i,1);
-                    //i--;
-                }
+                    adams.shift();
+                }      
             }
         }
     
