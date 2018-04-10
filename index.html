@@ -10,7 +10,7 @@
     <script type="text/paperscript" canvas="myCanvas">    
         var maxPoint = new Point(view.size.width, view.size.height);
         var adams = [];
-    
+        var path = "./boff.png"
         var keyData = {
             a: sound = new Howl({src: ["./adams/a.mp3"]}),
             b: sound = new Howl({src: ["./adams/b.mp3"]}),
@@ -45,7 +45,7 @@
                 keyData[event.key].play();
                 var randomPoint = Point.random() * maxPoint;
                 var randomScale = Math.random() * 5;
-                var adam = new Raster("./boff.png")
+                var adam = new Raster(path)
                 adam.position = randomPoint;
                 adam.scale(randomScale);
                 adams.push(adam);
@@ -57,7 +57,10 @@
                 adams[i].scale(0.95);
                 if(i > 50){
                     adams.shift();
-                }      
+                    path = "./boff2.png"
+                } else {
+                    path = "./boff.png"
+                }
             }
         }
     
