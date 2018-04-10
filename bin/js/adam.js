@@ -1,15 +1,3 @@
-//var raster = new Raster('adam');
-//
-//raster.position = view.center;
-//raster.scale(0.7);
-//raster.rotate(45);
-
-// var adam = new Raster("./boff.png");
-// 
-// adam.
-// adam.position = view.center;
-// adam.scale(2);
-
 var maxPoint = new Point(view.size.width, view.size.height);
 var adams = [];
 
